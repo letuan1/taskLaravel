@@ -61,13 +61,15 @@
 
                 <td>
 
-                    <a href="#">Xem</a> | <a href="#">Sửa</a> | <a href="{{ route('delete', $list->id) }}">Xóa</a>
+                   <a href="{{ route('update', $list->id ) }}">Sửa</a> | <a href="{{ route('delete', $list->id) }}">Xóa</a>
 
                 </td>
 
             </tr>
         @endforeach
         </tbody>
+
+        <a href="{{ route('add') }}"><h1>Add</h1></a>
     </table>
 </div>
 
