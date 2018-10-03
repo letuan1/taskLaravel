@@ -27,7 +27,7 @@
 <div class="bg-contact3" style="background-image: url('images/bg-01.jpg');">
     <div class="container-contact3">
         <div class="wrap-contact3">
-            <form class="contact3-form validate-form" method="post" action="{{ route('dataAdd') }}">
+            <form class="contact3-form validate-form" method="post" action="{{ route('add') }}">
                 {{ csrf_field() }}
 					<span class="contact3-form-title">
 						Insert

@@ -20,12 +20,10 @@ Route::prefix('tasks')->group(function () {
 
     Route::get('{id}/delete/', 'ManagementController@delete')->name('delete');
 
-    Route::get('add', 'ManagementController@edit')->name('add');
+    Route::match(['get', 'post'],'add', 'ManagementController@edit')->name('add');
 
-    Route::post('add', 'ManagementController@edit')->name('dataAdd');
 
-    Route::get('{id1}/update/', 'ManagementController@update')->name('update');
+    Route::match(['get', 'post'], '{id1}/update/', 'ManagementController@update')->name('update');
 
-    Route::post('{id1}/update/', 'ManagementController@update')->name('updates');
 });
 
